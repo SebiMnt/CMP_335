@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width", initial-scale-1.0>
+    <title>Basketball Shoe Survey Form</title>
+    <link rel="stylesheet" href="SurveyForm.css">
+</head> 
+
+<body>
+    <h1>Basketball Shoe Survey Form</h1>
+    <p>Thank you for taking the time to fill out this form!</p>
+    <form id="surveyForm">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email" required><br>
+
+        <label for="competition">Level of Competition*</label><br>
+
+        <select id="competition" name="competition" required>
+            <option value="">What level do you compete in?</option>
+            <option value="middle_school">Middle School</option>
+            <option value="high_school">High School</option>
+            <option value="college">College</option>
+            <option value="pro">Professional</option>   
+            <option value="other">Other</option>
+        </select>
+        
+        <p class="orange_title">Position(s) Played</p>
+
+        <div>
+            <input type="checkbox" id="point_guard" name="position" value="point_guard">
+            <label for="point-guard" class="black_label">Point Guard</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="shooting_guard" name="position" value="shooting_guard">
+            <label for="shooting-guard" class="black_label">Shooting Guard</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="small_forward" name="position" value="small_forward">
+            <label for="small-forward" class="black_label">Small Forward</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="power_forward" name="position" value="power_forward">
+            <label for="power-forward" class="black_label">Power Forward</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="center" name="position" value="center">
+            <label for="center" class="black_label">Center</label>
+        </div>
+
+        <p class="orange_title">Favorite Basketball Shoe Brand*</p>
+
+        <div>
+            <input type="radio" id="nike" name="brand" value="nike" required>
+            <label for="nike" class="black_label">Nike</label>
+        </div>
+
+        <div>
+            <input type="radio" id="under_armour" name="brand" value="under_armour">
+            <label for="under-armour" class="black_label">Under Armour</label>
+        </div>
+
+        <div>
+            <input type="radio" id="adidas" name="brand" value="adidas">
+            <label for="adidas" class="black_label">Adidas</label>
+        </div>
+
+        <div>
+            <input type="radio" id="reebok" name="brand" value="reebok">
+            <label for="reebok" class="black_label">Reebok</label>
+        </div>
+
+        <div>
+            <input type="radio" id="anta" name="brand" value="anta">
+            <label for="anta" class="black_label">Anta</label>
+        </div>
+
+        <div>
+            <input type="radio" id="other" name="brand" value="other">
+            <label for="other" class="black_label">Other</label>
+        </div><br>
+
+        <label for="comments">Comments</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="50"></textarea><br>
+
+
+        <button type="submit" onclick="myfunction()">Submit</button>
+    </form>
+
+    <script>
+        function myfunction() {
+            if (document.getElementById("name").value == "" ||
+                document.getElementById("email").value == "" ||
+                document.getElementById("competition").value == "" ||
+                document.querySelector('input[name="brand"]:checked') == null) {
+
+                alert("Please fill out all required fields.");
+            }
+            else {
+                alert("Thank you for filling out the form!");
+            }
+        }
+    </script>
+</body>

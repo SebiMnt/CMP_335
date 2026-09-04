@@ -1,0 +1,38 @@
+h1 {
+    color: orange;
+}
+p {
+    color: black;
+}
+input {
+    display: block;
+    width: 25%;
+}
+label {
+    color: orange;
+}
+select {
+    width: 25%;
+}
+input[type="checkbox"] {
+    display: inline;
+    width: auto;
+}
+.orange_title {
+    color: orange;
+}
+.black_label {
+    color: black
+}
+input[type="radio"] {
+    display: inline;
+    width: auto;
+}
+textarea {
+    width: 40%;
+    height: 100px;
+}
+button {
+    background-color: orange;
+    color: white;
+}
